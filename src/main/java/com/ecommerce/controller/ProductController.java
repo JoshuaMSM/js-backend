@@ -25,4 +25,9 @@ public class ProductController {
     public Product addProduct(@RequestBody Product product) {
         return service.saveProduct(product);
     }
+
+    @DeleteMapping("/{id}")
+    public void deleteProduct(@PathVariable Long id){
+        service.deleteProduct(id);
+    }
 }
